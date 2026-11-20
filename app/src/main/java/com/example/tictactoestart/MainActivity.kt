@@ -86,7 +86,10 @@ fun TableLayout(modifier: Modifier = Modifier,state: GameState, clickFun : (Int)
                         painter = painterResource(id = drawableRes),
                         contentDescription = "Field $index",
                         contentScale = ContentScale.FillBounds,
-                        modifier = Modifier.fillMaxSize().weight(1.0f,true).clickable {
+                        modifier = Modifier.fillMaxSize()
+                            .weight(1.0f,true)
+                            .padding(end=4.dp)
+                            .clickable {
                             clickFun(index)
                         }
                     )
